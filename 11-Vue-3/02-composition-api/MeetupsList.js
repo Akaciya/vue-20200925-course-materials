@@ -2,7 +2,7 @@ import { MeetupListItem } from './MeetupsListItem.js';
 
 const template = `
 <div class="meetups-list">
-   <meetup-list-item v-for="meetup in meetups" :meetup="meetup" :key="meetup.id"></meetup-list-item>
+  <meetup-list-item v-for="meetup in meetups" :meetup="meetup" :key="meetup.id"></meetup-list-item>
 </div>
 `;
 

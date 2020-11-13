@@ -1,5 +1,12 @@
-import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js';
+import { createApp } from './vue3.esm-browser.js';
 import { App } from './App.js';
+import { ToasterPlugin } from './ToasterPlugin.js';
 
-const app = new Vue(App);
-app.$mount('#app');
+const app = createApp(App)
+  .use(ToasterPlugin)
+  .provide('config', {
+    API_URL: 'https://course-vue.javascript.ru/api',
+  })
+  .mount('#app');
+
+window.app = app;
